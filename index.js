@@ -45,6 +45,7 @@ app.get("/favicon.ico", (req, res) => res.status(204).end());
 // حل مشكلة صفحة الفرونت الوسيطة اثناء تغيير كلمة الباسورد
 
 app.get("/reset-password/:token", (req, res) => {
+    console.log("RESET PASSWORD PAGE ROUTE HIT");
     const token = req.params.token;
 
     const appLink = `vistria://reset?token=${encodeURIComponent(token)}`;
