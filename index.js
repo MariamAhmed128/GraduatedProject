@@ -42,6 +42,12 @@ app.get("/", (req, res) => {
 app.get("/favicon.ico", (req, res) => res.status(204).end());
 
 // ======
+app.get("/route-test", (req, res) => {
+    res.json({
+        success: true,
+        message: "Route test is working"
+    });
+});
 // حل مشكلة صفحة الفرونت الوسيطة اثناء تغيير كلمة الباسورد
 
 app.get("/reset-password/:token", (req, res) => {
